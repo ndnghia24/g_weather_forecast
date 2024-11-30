@@ -1,3 +1,7 @@
+import 'dart:html' as html;
+import 'dart:convert';
+import 'dart:async';
+
 import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -63,13 +67,13 @@ class WeatherApi {
 
   Future<Map<String, dynamic>> getCurrentLocation() async {
     try {
-      final getIp = await dio.get('http://ip-api.com/json/');
+      final getIp = await dio.get('https://ipinfo.io/json');
 
       final response = await dio.get(
         'https://api.weatherapi.com/v1/search.json',
         queryParameters: {
           'key': apiKey,
-          'q': getIp.data['query'],
+          'q': getIp.data['ip'],
         },
       );
       return response.data[0];

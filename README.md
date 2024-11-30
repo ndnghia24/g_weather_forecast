@@ -3,7 +3,7 @@
 
 **Architecture:**
 
-![Architecture](https://i.ibb.co/6R0Sz0w/Bi-u-kh-ng-c-ti-u.png)
+![Architecture](https://i.ibb.co/t8jkg0L/Bi-u-kh-ng-c-ti-u.png)
 
 
 ---
